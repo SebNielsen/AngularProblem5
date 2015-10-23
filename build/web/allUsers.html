@@ -1,0 +1,23 @@
+<div class="container" ng-controller="UserController as userCtrl">
+    <h2>Person List</h2>
+    <div class="row, col-sm-12">
+        <div class="col-sm-6">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in userCtrl.users">
+                        <td><img src="{{user.picture.thumbnail}}" alt="profilpicture"></td>
+                        <td>{{user.first}} {{user.last}}</td>
+                        <td><a href="#/detail/{{user.first}}">Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
